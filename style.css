@@ -1,0 +1,76 @@
+body {
+  font-family: 'Courier New', Courier, monospace; /* Prioritize monospace */
+  margin: 20px;
+  background-color: #222; /* Dark background */
+  color: #eee;  /* Light text color */
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px; /* Less rounded corners */
+  cursor: pointer;
+  background-color: #333; /* Darker button background */
+  outline: none; /* Remove default outline */
+  position: relative; /* Enable positioning for the pseudo-element */
+}
+button:focus::after {
+  content: "";
+  position: absolute;
+  inset: 0px; /* Inset: 0 stretches the element to cover the entire button */
+  border: 2px solid #007bff; /* Blue border for the animation */
+  animation: buttonFocus 0.5s ease-in-out forwards;
+}
+@keyframes buttonFocus {
+  from {
+    transform: scale(0.9); /* Start slightly shrunk */
+    opacity: 0; /* Initially invisible */
+  }
+  to {
+    transform: scale(1); /* Animate to full size */
+    opacity: 1; /* Animate to full opacity */
+  }
+}
+
+#startBtn {
+  background-color: #007bff;
+  color: white;
+}
+
+#stopBtn {
+  background-color: #dc3545;
+  color: white;
+}
+#saveBtn {
+  background-color: green;
+  color: white;
+}
+#playBtn {
+  background-color: rgb(51, 23, 27);
+  color: white;
+}
+
+
+
+#transcript {
+  border: 1px solid #333; /* Subtle darker border */
+  padding: 10px;
+  min-height: 100px; 
+  background-color: #282828; /* Slightly lighter background */
+}
+
+#status {
+  margin-top: 10px; 
+  font-weight: bold;
+  color: #0099cc; /* A bright status color */
+}
+.focused {
+  background-color: #e6e6e6; /* Example:  A slightly lighter background */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Example: Subtle shadow */
+} 
+
