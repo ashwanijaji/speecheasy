@@ -7,7 +7,7 @@ const statusElement = document.getElementById('status');
 
 
 
-// Replace with your Google Cloud Speech-to-Text API key
+
 const googleSpeechApiKey = '%%GOOGLE_SPEECH_API_KEY%%';
 
 
@@ -85,7 +85,7 @@ saveBtn.addEventListener('click', () => {
   displayStatus('Transcript saved!');
   setTimeout(() => { displayStatus('') }, 2000); // Reset status after 2 seconds
 });
-// ... (Other JavaScript code variables and helper functions)
+
 
 playBtn.addEventListener('click', () => {
   if (transcript.length === 0) {
